@@ -23,8 +23,6 @@ All of these are "browser-only" and "offline-first" tools — no data ever leave
 
 - **Cloud**: Azure (VMs, Functions, SQL Database, Cosmos DB, IoT Hub, Log Analytics)
 - **Data Engineering**: Databricks, Parquet, MLflow
-- **IoT / Smart Home**: Raspberry Pi, Pico, Home Assistant, SwitchBot, e-paper displays
-- **Other**: Retro gaming emulation, home construction & smart home integration
 
 ## 📫 Contact
 
