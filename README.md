@@ -15,6 +15,8 @@ All of these are "browser-only" and "offline-first" tools — no data ever leave
 | [htmlapps-jargon-bingo](https://github.com/ttomohisa/htmlapps-jargon-bingo) | Generates a bingo card filled with workplace and technical jargon for meetings, workshops, or team fun |
 | [htmlappps-gif-optimizer](https://github.com/ttomohisa/htmlappps-gif-optimizer) | Optimizes animated GIFs directly in the browser to help reduce file size |
 | [htmlapps-temporary-links](https://github.com/ttomohisa/htmlapps-temporary-links) | Creates temporary, shareable links in a browser-only workflow |
+| [htmlapps-private-face-redactor](https://github.com/ttomohisa/htmlapps-private-face-redactor) | Detects and redacts faces in images locally in the browser to protect privacy |
+| [htmlapps-mine-window](https://github.com/ttomohisa/htmlapps-mine-window) | A browser-based, single-file window utility designed for lightweight offline use |
 
 
 ## 💡 Development Philosophy
