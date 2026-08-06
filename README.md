@@ -1,35 +1,56 @@
-## Hi there 👋
+# Hi, I'm Tomohisa 👋
 
-I work in cloud architecture and data engineering, focusing on Azure and Databricks.
-I enjoy building **server-free, single-file HTML tools** to solve small everyday pain points I run into at work and in personal projects.
+I work in cloud architecture and data engineering, mainly with Azure and Databricks.
 
-## 🔧 What I'm Building
+I also build small, privacy-conscious browser tools that solve practical problems without requiring an application server. Most projects are distributed as a self-contained HTML file and can process selected files locally on the user's device.
 
-All of these are "browser-only" and "offline-first" tools — no data ever leaves your machine.
+## Browser tools
 
-| Repository | Description |
-|---|---|
-| [html-parquet-viewer](https://github.com/ttomohisa/html-parquet-viewer) | Drag-and-drop a Parquet file into the browser to instantly view its schema and data as a table |
-| [image-to-webp-base64](https://github.com/ttomohisa/image-to-webp-base64) | Converts images to WebP format and generates a Base64-encoded string (data URI) |
-| [htmlapps-office-image-extractor](https://github.com/ttomohisa/htmlapps-office-image-extractor) | Extracts all embedded images from Office files (Word/Excel/PowerPoint) in bulk |
-| [htmlapps-jargon-bingo](https://github.com/ttomohisa/htmlapps-jargon-bingo) | A private, offline meeting-jargon bingo game with customizable and JSON-importable word packs, 3x3/4x4/5x5 cards, PNG export, and an always-on-top Document Picture-in-Picture card with stealth and Boss modes |
-| [htmlappps-gif-optimizer](https://github.com/ttomohisa/htmlappps-gif-optimizer) | Optimizes animated GIFs directly in the browser to help reduce file size |
-| [htmlapps-temporary-links](https://github.com/ttomohisa/htmlapps-temporary-links) | A disposable local work queue for temporary web links, `file:///` URLs, Windows paths, and UNC paths, with expiry rules, notes, Markdown export, and an always-on-top Document Picture-in-Picture window |
-| [htmlapps-private-face-redactor](https://github.com/ttomohisa/htmlapps-private-face-redactor) | Detects faces locally with YuNet and ONNX Runtime Web, then redacts them using pixelation, blur, solid fills, eye bars, emoji, or custom-image overlays; supports manual masks, stamps, and JPEG/PNG/WebP export |
-| [htmlapps-mine-window](https://github.com/ttomohisa/htmlapps-mine-window) | A self-contained offline Minesweeper game that runs in a Document Picture-in-Picture floating window, with local records, resumable games, custom boards, keyboard/touch controls, and an optional Boss mode |
+The goal is not to use only “vanilla” technology. I prefer the simplest architecture that keeps an app portable, inspectable, and easy to preserve. Depending on the problem, a project may embed libraries, WebAssembly binaries, workers, fonts, or machine-learning models directly into the generated HTML.
 
+Many projects include Japanese and English interfaces, downloadable standalone HTML files, and GitHub Pages demos.
 
-## 💡 Development Philosophy
+### Documents and media
 
-- **Single-file HTML distribution**: no build step — just download and open
-- **Offline-first**: all processing happens in the browser, nothing is sent externally
-- **Vanilla JavaScript**: avoiding framework lock-in for long-term maintainability
+| Project                                                                                | What it does                                                                                              |
+| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [PDF Organizer](https://github.com/ttomohisa/html-pdf-organizer)                       | Reorder, rotate, remove, merge, preview, and export PDF pages locally in the browser.                     |
+| [Local Video Compressor](https://github.com/ttomohisa/htmlapps-video-compressor)       | Compress video locally with ffmpeg.wasm, with resolution, codec, bitrate, frame-rate, and audio controls. |
+| [Office Image Extractor](https://github.com/ttomohisa/htmlapps-office-image-extractor) | Extract embedded images from Word, Excel, and PowerPoint files in bulk.                                   |
+| [Private Face Redactor](https://github.com/ttomohisa/htmlapps-private-face-redactor)   | Detect and redact faces locally using YuNet and ONNX Runtime Web, with automatic and manual masks.        |
+| [GIF Optimizer](https://github.com/ttomohisa/htmlappps-gif-optimizer)                  | Optimize animated GIFs directly in the browser to reduce file size.                                       |
+| [Image to WebP / Base64](https://github.com/ttomohisa/image-to-webp-base64)            | Convert images to WebP and generate Base64 data URIs.                                                     |
 
-## 🛠 Skills & Interests
+### Data, workflow, and small utilities
 
-- **Cloud**: Azure (VMs, Functions, SQL Database, Cosmos DB, IoT Hub, Log Analytics)
-- **Data Engineering**: Databricks, Parquet, MLflow
+| Project                                                                  | What it does                                                                                            |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| [HTML Parquet Viewer](https://github.com/ttomohisa/html-parquet-viewer)  | Inspect Parquet schemas and browse data as a table without uploading the file.                          |
+| [Temporary Links](https://github.com/ttomohisa/htmlapps-temporary-links) | Keep a disposable local queue of web links, file URLs, Windows paths, and UNC paths.                    |
+| [Jargon Bingo](https://github.com/ttomohisa/htmlapps-jargon-bingo)       | Create customizable offline meeting-jargon bingo cards, including a floating-window mode.               |
+| [Mine Window](https://github.com/ttomohisa/htmlapps-mine-window)         | Play a self-contained Minesweeper game in a normal page or floating Document Picture-in-Picture window. |
 
-## 📫 Contact
+### For building more single-HTML apps
 
-Feel free to reach out via GitHub Issues or PRs!
+| Project                                                                    | What it does                                                                                                                                                           |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Single HTML App Template](https://github.com/ttomohisa/htmlapps-template) | A reusable repository template for building, verifying, packaging, and publishing self-contained browser apps, including an optional gzip self-extracting HTML output. |
+
+## Development approach
+
+* **Self-contained delivery:** Prefer a downloadable HTML file over a permanently hosted application stack.
+* **Local-first processing:** Keep user-selected files and application data on the device whenever the browser platform allows it.
+* **Reproducible builds:** Pin third-party dependencies, embed only required assets, and record hashes or notices where appropriate.
+* **Browser capabilities first:** Use WebAssembly, Web Workers, File APIs, Canvas, IndexedDB, and Document Picture-in-Picture when they provide practical value.
+* **Minimal runtime dependencies:** Avoid runtime CDNs, remote APIs, analytics, and telemetry where practical.
+* **Simple maintenance:** Favor readable source, Windows-friendly build scripts, automated checks, and GitHub Pages deployment.
+
+## Skills and interests
+
+* **Cloud and data:** Azure, Databricks, Parquet, MLflow, IoT, data engineering
+* **Browser applications:** HTML, CSS, JavaScript, WebAssembly, Web Workers, local file processing
+* **Delivery and automation:** GitHub Actions, GitHub Pages, PowerShell-based standalone builds
+
+## Contact
+
+Bug reports, feature ideas, and pull requests are welcome in the relevant repository.
