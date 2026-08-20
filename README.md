@@ -2,25 +2,25 @@
 
 I work in cloud architecture and data engineering, mainly with Azure and Databricks.
 
-I also build practical browser tools that use the browser as a lightweight local application runtime. Many of these tools are distributed as a **single self-contained HTML file** and are designed to process files, media, sensor data, and other user content locally without requiring an application backend.
+I also build practical browser tools that use the browser as a lightweight local application runtime. Many of these tools are distributed as a **single self-contained HTML file** and process files, media, databases, sensor data, and other user content locally without requiring an application backend.
 
 🌐 **[Browser Kitty](https://browser-kitty.com/)** — a growing collection of my browser-based tools.
 
 ## 🐱 Browser tools
 
-I like exploring how far a browser can go as an application platform.
+I like exploring how far the browser can go as an application platform.
 
-Depending on the problem, these projects use browser-native APIs, WebAssembly, Web Workers, Canvas, local storage, cameras, microphones, sensors, SQLite, FFmpeg, and on-device machine learning.
+Depending on the problem, these projects use browser-native APIs, WebAssembly, Web Workers, Canvas, WebCodecs, Web Audio, local storage, cameras, microphones, sensors, SQLite, FFmpeg, and on-device machine learning.
 
 Most recent projects share a few principles:
 
-* Local-first processing
-* Single-HTML distribution
-* No account required
-* Minimal or no runtime network access
-* Japanese / English UI
-* Smartphone-friendly interfaces where appropriate
-* Reproducible builds and automated verification
+* **Local-first processing**
+* **Single-HTML distribution**
+* **No account required**
+* **Minimal or no runtime network access**
+* **Japanese / English UI**
+* **Smartphone-friendly interfaces where appropriate**
+* **Reproducible builds and automated verification**
 
 ### 📄 Documents, images & privacy
 
@@ -31,20 +31,23 @@ Most recent projects share a few principles:
 | [PDF Compare](https://github.com/ttomohisa/htmlapps-pdf-compare)                                 | Compare two PDF revisions, align corresponding pages, and detect inserted, removed, visual, and text differences.                                                 |
 | [Image Compressor & Converter](https://github.com/ttomohisa/htmlapps-image-compressor-converter) | Compress, resize, convert, compare, and export PNG, JPEG, and WebP images, including batch and target-size workflows.                                             |
 | [Face Redactor](https://github.com/ttomohisa/htmlapps-face-redactor)                             | Detect faces locally with YuNet + ONNX Runtime Web and hide them using pixelation, blur, fills, eye bars, emoji, or custom images.                                |
-| [Photo Privacy Inspector](https://github.com/ttomohisa/htmlapps-photo-privacy-inspector)         | Inspect what GPS, timestamps, device information, creator fields, and other hidden photo metadata could reveal before sharing an image.                           |
+| [Photo Privacy Inspector](https://github.com/ttomohisa/htmlapps-photo-privacy-inspector)         | Inspect GPS, timestamps, device information, creator fields, and other hidden photo metadata before sharing an image.                                             |
 | [Office Image Extractor](https://github.com/ttomohisa/htmlapps-office-image-extractor)           | Extract embedded images from Word, Excel, and PowerPoint files in bulk.                                                                                           |
-| [GIF Optimizer](https://github.com/ttomohisa/htmlappps-gif-optimizer)                            | Optimize animated GIFs directly in the browser to reduce file size.                                                                                               |
 | [Image to WebP / Base64](https://github.com/ttomohisa/image-to-webp-base64)                      | Convert images to WebP and generate Base64 data URIs.                                                                                                             |
 
-### 🎬 Video & media
+### 🎬 Video & audio
 
-| Project                                                                              | What it does                                                                                                                           |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [Local Video Compressor](https://github.com/ttomohisa/htmlapps-video-compressor)     | Compress video locally with a dedicated FFmpeg WebAssembly build, with controls for resolution, bitrate, frame rate, codec, and audio. |
-| [Lossless Video Cutter](https://github.com/ttomohisa/htmlapps-lossless-video-cutter) | Cut MP4, MOV, MKV, and WebM video without re-encoding by remuxing the original compressed streams in the browser.                      |
-| [Music Practice Kit](https://github.com/ttomohisa/htmlapps-music-practice-kit)       | Combine a tuner, metronome, TAP BPM, drone tone, practice timer, recorder, and spectrum analyzer in one browser app.                   |
+| Project                                                                              | What it does                                                                                                                                                     |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Local Video Compressor](https://github.com/ttomohisa/htmlapps-video-compressor)     | Compress video locally with a purpose-built FFmpeg WebAssembly core, including resolution, bitrate, frame-rate, and audio controls.                              |
+| [Lossless Video Cutter](https://github.com/ttomohisa/htmlapps-lossless-video-cutter) | Cut MP4, MOV, MKV, and WebM video without re-encoding by remuxing the original compressed streams in the browser.                                                |
+| [Video Face Redactor](https://github.com/ttomohisa/htmlapps-video-face-redactor)     | Detect faces in videos locally, review and correct masks frame by frame, and export redacted H.264 MP4 video.                                                    |
+| [Media Inspector](https://github.com/ttomohisa/htmlapps-media-inspector)             | Inspect containers, codecs, bitrate, FPS, HDR/color information, audio, subtitles, chapters, rotation, and metadata, with browser-specific playback diagnostics. |
+| [Video Contact Sheet](https://github.com/ttomohisa/htmlapps-video-contact-sheet)     | Sample 12, 24, or 48 frames across an entire video and combine them into a zoomable PNG/JPEG overview image.                                                     |
+| [Video to GIF / WebP](https://github.com/ttomohisa/htmlapps-video-to-gif-webp)       | Trim and crop a local video and convert the selected range into an animated GIF or WebP using compact FFmpeg WASM cores.                                         |
+| [Music Practice Kit](https://github.com/ttomohisa/htmlapps-music-practice-kit)       | Combine a tuner, metronome, TAP BPM, drone tone, practice timer, recorder, and spectrum analyzer in one browser app.                                             |
 
-### 🗃️ Data & developer tools
+### 🗃️ Data, writing & workflow
 
 | Project                                                                                | What it does                                                                                                                            |
 | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -66,34 +69,73 @@ Most recent projects share a few principles:
 | [Tap Counter](https://github.com/ttomohisa/htmlapps-tap-counter)                 | A smartphone-friendly tally counter for people, inventory, laps, repetitions, and multiple simultaneous categories.      |
 | [Pomodoro Timer](https://github.com/ttomohisa/htmlapps-pomodoro-timer)           | A local-first focus timer with Picture-in-Picture, distraction counting, flow overtime, and local session history.       |
 
-### 🧪 Small experiments
+### 🧪 Experiments
 
-| Project                                                            | What it does                                                                                                   |
-| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| [Jargon Bingo](https://github.com/ttomohisa/htmlapps-jargon-bingo) | Create customizable offline meeting-jargon bingo cards, including a floating Document Picture-in-Picture mode. |
-| [Mine Window](https://github.com/ttomohisa/htmlapps-mine-window)   | Play Minesweeper in a normal page or floating Document Picture-in-Picture window.                              |
+| Project                                                                   | What it does                                                                                                                                     |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Optical File](https://github.com/ttomohisa/htmlapps-optical-file-camera) | Turn a file up to 1 MiB into an Animated QR WebP and reconstruct it by scanning the animation with another device or decoding the WebP directly. |
+| [Jargon Bingo](https://github.com/ttomohisa/htmlapps-jargon-bingo)        | Create customizable offline meeting-jargon bingo cards, including a floating Document Picture-in-Picture mode.                                   |
+| [Mine Window](https://github.com/ttomohisa/htmlapps-mine-window)          | Play Minesweeper in a normal page or floating Document Picture-in-Picture window.                                                                |
 
-## 🏗️ Building single-HTML apps
+## 🧩 WebAssembly & build infrastructure
 
-Some projects are infrastructure for the apps themselves.
+Browser apps are only part of the project.
 
-| Project                                                                          | What it does                                                                                                                                                               |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Single HTML App Template](https://github.com/ttomohisa/htmlapps-template)       | A reusable repository template for building, verifying, packaging, and publishing self-contained browser applications.                                                     |
-| [FFmpeg WASM Builder](https://github.com/ttomohisa/htmlapps-ffmpeg-wasm-builder) | Build small, purpose-specific FFmpeg WebAssembly cores directly from pinned FFmpeg / Emscripten sources instead of embedding the full general-purpose FFmpeg distribution. |
+I'm also working on the tooling needed to build, verify, package, and distribute browser-friendly WebAssembly.
+
+| Project                                                                          | What it does                                                                                                                                                                  |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Single HTML App Template](https://github.com/ttomohisa/htmlapps-template)       | A reusable repository template for building, verifying, packaging, and publishing self-contained browser applications.                                                        |
+| [FFmpeg WASM Builder](https://github.com/ttomohisa/htmlapps-ffmpeg-wasm-builder) | Build small, purpose-specific FFmpeg WebAssembly cores directly from pinned FFmpeg / Emscripten sources.                                                                      |
+| [WASM Zoo](https://github.com/ttomohisa/wasm-zoo)                                | Build and publish current upstream native software for WebAssembly with reproducible recipes, capability manifests, checksums, source archives, and real browser smoke tests. |
 
 ### FFmpeg WASM Builder
 
-Rather than shipping the full FFmpeg CLI for every video tool, I'm experimenting with **application-specific FFmpeg WebAssembly builds**.
+Instead of embedding the full general-purpose FFmpeg CLI into every tool, I build **application-specific FFmpeg WebAssembly cores**.
 
-Each profile starts from `--disable-everything` and enables only the components required by that application.
+Each profile starts from `--disable-everything` and enables only the demuxers, muxers, codecs, filters, and libraries actually required by the application.
 
 Current profiles include:
 
-* **Video Compressor** — H.264 + AAC encoding using x264
-* **Lossless Video Cutter** — stream-copy cutting without decoders or encoders
+| Profile                 | Purpose                                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------ |
+| `video-compressor`      | H.264 + AAC video compression using x264                                                         |
+| `lossless-video-cutter` | Stream-copy cutting without video/audio decoding or encoding                                     |
+| `media-inspector`       | Container, codec, bitrate, FPS, HDR, audio, subtitle, chapter, rotation, and metadata inspection |
+| `video-contact-sheet`   | Seek through a video and decode only the frames needed for 12 / 24 / 48-frame overview sheets    |
+| `video-to-gif`          | Trim, crop, resize, and encode animated GIFs                                                     |
+| `video-to-webp`         | Trim, crop, resize, and encode animated WebP using libwebp                                       |
 
-The generated cores run in Web Workers, do not require pthreads, `SharedArrayBuffer`, COOP / COEP headers, or a backend server, and are tested with real browser smoke tests.
+The cores run in Web Workers and are designed to work without pthreads, `SharedArrayBuffer`, COOP / COEP headers, or a backend server.
+
+Every release profile is compiled from pinned source revisions and exercised by a **real browser smoke test**, not just checked for successful compilation.
+
+### WASM Zoo
+
+**[WASM Zoo](https://github.com/ttomohisa/wasm-zoo)** takes a different approach.
+
+While FFmpeg WASM Builder produces deliberately small, application-specific cores, WASM Zoo aims to provide **broad, upstream-shaped WebAssembly distributions of native software** with explicit capability reporting.
+
+Current packages include:
+
+| Package            | Browser build                                                     |
+| ------------------ | ----------------------------------------------------------------- |
+| **FFmpeg 9**       | Broad FFmpeg CLI builds, including an optional GPL / x264 profile |
+| **libarchive 3.8** | `bsdtar`, `bsdcpio`, `bsdcat`, and `bsdunzip`                     |
+| **ImageMagick 7**  | Browser build of the upstream `magick` CLI                        |
+
+Each Zoo package aims to provide:
+
+* Exact upstream and toolchain revisions
+* Reproducible build scripts
+* Real browser runtime smoke tests
+* Machine-readable manifests and feature inventories
+* SHA-256 checksums
+* License notices
+* Corresponding source archives
+* Interactive browser playgrounds
+
+The next candidates currently being explored include **libvips** and **Ghostscript**.
 
 ## 💡 Development approach
 
@@ -101,31 +143,40 @@ The generated cores run in Web Workers, do not require pthreads, `SharedArrayBuf
   Keep user-selected files, media, database contents, sensor readings, and application data on the device whenever the browser platform allows it.
 
 * **Self-contained delivery**
-  Prefer a downloadable HTML artifact that remains useful independently of a permanently hosted application stack.
+  Prefer downloadable artifacts that remain useful independently of a permanently hosted application stack.
 
 * **Use the browser as an application runtime**
-  Take advantage of WebAssembly, Web Workers, File APIs, Canvas, IndexedDB, Web Audio, camera / microphone / sensor APIs, Document Picture-in-Picture, and other browser capabilities when they provide practical value.
+  Take advantage of WebAssembly, Web Workers, WebCodecs, File APIs, Canvas, IndexedDB, Web Audio, camera / microphone / sensor APIs, Document Picture-in-Picture, and other browser capabilities when they provide practical value.
 
 * **Purpose-specific dependencies**
-  Libraries and WebAssembly are welcome when useful, but unnecessary runtime dependencies are avoided.
+  Libraries and WebAssembly are welcome when they solve a real problem. The goal is not “vanilla only”; it is to keep the runtime understandable and avoid unnecessary dependencies.
+
+* **Build small when the application needs small**
+  For tools such as video processing, build dedicated WebAssembly profiles containing only the features the application actually uses.
+
+* **Preserve upstream shape when generality matters**
+  Projects such as WASM Zoo take the opposite approach and expose broad upstream functionality when a reusable general-purpose distribution is more useful.
 
 * **Reproducible builds**
-  Pin third-party versions and source revisions, embed only required assets, and record hashes and licensing information where appropriate.
+  Pin third-party versions and source revisions, publish corresponding source where appropriate, and record hashes and licensing information.
 
 * **Minimal runtime network use**
   Avoid runtime CDNs, remote APIs, analytics, telemetry, and cloud processing where practical.
 
+* **Test the real runtime**
+  Compilation is not enough for WebAssembly. Build pipelines should exercise meaningful functionality in an actual browser.
+
 * **Simple maintenance**
-  Favor readable source, Windows-friendly PowerShell / `.bat` workflows, automated checks, real-browser smoke tests, and GitHub Pages deployment.
+  Favor readable source, Windows-friendly PowerShell / `.bat` workflows, automated checks, and GitHub Pages deployment.
 
 ## 🛠 Skills & interests
 
 * **Cloud & data engineering:** Azure, Databricks, Parquet, MLflow, IoT
-* **Browser applications:** HTML, CSS, JavaScript, WebAssembly, Web Workers
+* **Browser applications:** HTML, CSS, JavaScript, WebAssembly, Web Workers, WebCodecs
 * **Local processing:** PDFs, images, video, audio, SQLite, structured data
 * **Browser APIs:** File APIs, Canvas, Web Audio, Media Capture, sensors, IndexedDB, Picture-in-Picture
-* **Build & automation:** PowerShell, GitHub Actions, GitHub Pages, reproducible standalone builds
-* **WebAssembly:** FFmpeg / Emscripten, ONNX Runtime Web, purpose-specific WASM builds
+* **WebAssembly:** FFmpeg, Emscripten, libarchive, ImageMagick, ONNX Runtime Web
+* **Build & automation:** PowerShell, GitHub Actions, GitHub Pages, reproducible builds, browser smoke testing
 
 ## 📫 Contact
 
