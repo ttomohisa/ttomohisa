@@ -12,7 +12,7 @@ I'm also interested in using HTML not only as a web page, but as a **portable fi
 
 ## 🐱 Browser tools
 
-Depending on the problem, these projects use browser-native APIs, WebAssembly, Web Workers, WebCodecs, Canvas, Web Audio, cameras, microphones, sensors, SQLite, FFmpeg, OpenCV, and on-device machine learning.
+Depending on the problem, these projects use browser-native APIs, WebAssembly, Web Workers, WebCodecs, Canvas, Web Audio, cameras, microphones, sensors, WebRTC, SQLite, FFmpeg, OpenCV, and on-device machine learning.
 
 Most recent projects share a few principles:
 
@@ -23,22 +23,24 @@ Most recent projects share a few principles:
 * **Japanese / English UI**
 * **Desktop and smartphone UX where appropriate**
 * **Pinned dependencies and reproducible builds**
-* **Automated verification instead of trusting the build blindly**
+* **Automated verification and real-browser testing where practical**
 
 ### 📄 Documents, images & privacy
 
-| Project                                                                                          | What it does                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [OneFile Album](https://github.com/ttomohisa/htmlapps-onefile-album)                             | Package multiple images, chapters, comments, and a responsive viewer into one portable HTML album that can later be opened and re-edited.                         |
-| [Submission PDF Scanner](https://github.com/ttomohisa/htmlapps-document-scanner)                 | Turn photos of paper documents into submission-ready PDFs with perspective correction, multi-page organization, A4 output, B&W conversion, and file-size targets. |
-| [PDF Organizer](https://github.com/ttomohisa/html-pdf-organizer)                                 | Reorder, rotate, remove, merge, preview, and export PDF pages locally in the browser.                                                                             |
-| [PDF Compare](https://github.com/ttomohisa/htmlapps-pdf-compare)                                 | Compare two PDF revisions, align corresponding pages, and detect inserted, removed, visual, and text differences.                                                 |
-| [Image Compressor & Converter](https://github.com/ttomohisa/htmlapps-image-compressor-converter) | Compress, resize, convert, compare, and export PNG, JPEG, and WebP images, including batch and target-size workflows.                                             |
-| [Face Redactor](https://github.com/ttomohisa/htmlapps-face-redactor)                             | Detect faces locally with YuNet + ONNX Runtime Web and hide them using pixelation, blur, fills, eye bars, emoji, or custom images.                                |
-| [Photo Privacy Inspector](https://github.com/ttomohisa/htmlapps-photo-privacy-inspector)         | Inspect GPS, timestamps, device information, creator fields, and other hidden photo metadata before sharing an image.                                             |
-| [Same Spot Diff](https://github.com/ttomohisa/htmlapps-same-spot-diff)                           | Automatically align Before / After photos taken from slightly different positions, then highlight the places that actually changed.                               |
-| [Office Image Extractor](https://github.com/ttomohisa/htmlapps-office-image-extractor)           | Extract embedded images from Word, Excel, and PowerPoint files in bulk.                                                                                           |
-| [Image to WebP / Base64](https://github.com/ttomohisa/image-to-webp-base64)                      | Convert images to WebP and generate Base64 data URIs.                                                                                                             |
+| Project                                                                                          | What it does                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [OneFile Album](https://github.com/ttomohisa/htmlapps-onefile-album)                             | Package multiple images, chapters, comments, and a responsive viewer into one portable HTML album that can later be opened and re-edited.                               |
+| [Submission PDF Scanner](https://github.com/ttomohisa/htmlapps-document-scanner)                 | Turn photos of paper documents into submission-ready PDFs with perspective correction, multi-page organization, A4 output, B&W conversion, and file-size targets.       |
+| [PDF Organizer](https://github.com/ttomohisa/html-pdf-organizer)                                 | Reorder, rotate, remove, merge, preview, and export PDF pages locally in the browser.                                                                                   |
+| [PDF Compare](https://github.com/ttomohisa/htmlapps-pdf-compare)                                 | Compare two PDF revisions, align corresponding pages, and detect inserted, removed, visual, and text differences.                                                       |
+| [Image Compressor & Converter](https://github.com/ttomohisa/htmlapps-image-compressor-converter) | Compress, resize, convert, compare, and export PNG, JPEG, and WebP images, including batch and target-size workflows.                                                   |
+| [Image Counter](https://github.com/ttomohisa/htmlapps-image-counter)                             | Manually count objects in photos with point or rectangle markers, review uncertain items, and export annotated results or a portable HTML viewer.                       |
+| [Smart Image Sorter](https://github.com/ttomohisa/htmlapps-smart-image-sorter)                   | Sort batches of up to 500 images into predefined categories with local TinyCLIP-based AI, review uncertain results, and export original files grouped into ZIP folders. |
+| [Face Redactor](https://github.com/ttomohisa/htmlapps-face-redactor)                             | Detect faces locally with YuNet + ONNX Runtime Web and hide them using pixelation, blur, fills, eye bars, emoji, or custom images.                                      |
+| [Photo Privacy Inspector](https://github.com/ttomohisa/htmlapps-photo-privacy-inspector)         | Inspect GPS, timestamps, device information, creator fields, and other hidden photo metadata before sharing an image.                                                   |
+| [Same Spot Diff](https://github.com/ttomohisa/htmlapps-same-spot-diff)                           | Automatically align Before / After photos taken from slightly different positions, then highlight the places that actually changed.                                     |
+| [Office Image Extractor](https://github.com/ttomohisa/htmlapps-office-image-extractor)           | Extract embedded images from Word, Excel, and PowerPoint files in bulk.                                                                                                 |
+| [Image to WebP / Base64](https://github.com/ttomohisa/image-to-webp-base64)                      | Convert images to WebP and generate Base64 data URIs.                                                                                                                   |
 
 ### 🎬 Video & audio
 
@@ -52,35 +54,38 @@ Most recent projects share a few principles:
 | [Video to GIF / WebP](https://github.com/ttomohisa/htmlapps-video-to-gif-webp)       | Trim and crop a local video and convert the selected range into an animated GIF or WebP using compact FFmpeg WASM cores.                                         |
 | [Music Practice Kit](https://github.com/ttomohisa/htmlapps-music-practice-kit)       | Combine a tuner, metronome, TAP BPM, drone tone, practice timer, recorder, and spectrum analyzer in one browser app.                                             |
 
-### 🗃️ Data, developer & workflow tools
+### 🗃️ Data, engineering & workflow
 
-| Project                                                                                | What it does                                                                                                                                    |
-| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [SQLite Explorer](https://github.com/ttomohisa/htmlapps-sqlite-explorer)               | Explore unfamiliar SQLite databases with table browsing, schema and relationship views, profiling, read-only SQL, and query-plan analysis.      |
-| [JSON / YAML / CSV Viewer](https://github.com/ttomohisa/htmlapps-json-yaml-csv-viewer) | Inspect, search, profile, check, and convert JSON, YAML, CSV, TSV, and JSON Lines locally.                                                      |
-| [HTML Parquet Viewer](https://github.com/ttomohisa/html-parquet-viewer)                | Inspect Parquet schemas and browse data as a table without uploading the file.                                                                  |
-| [Archive Explorer](https://github.com/ttomohisa/htmlapps-archive-explorer)             | Explore, preview, analyze, and extract ZIP, 7z, RAR5, TAR, GZIP, CAB, ISO, and LZH/LHA archives locally.                                        |
-| [Developer Toolbox](https://github.com/ttomohisa/httpapps-developer-toolbox)           | Put Base64, JSON, JWT, cron, regex, hashes, timestamps, text conversion, web utilities, and dozens of other developer tools into one HTML file. |
-| [Text Inspector](https://github.com/ttomohisa/htmlapps-text-inspector)                 | Go beyond character counting with composition analysis, frequent words, long-sentence detection, writing checks, and an X-Ray view.             |
-| [Markdown Preview Lab](https://github.com/ttomohisa/htmlapps-markdown-preview-lab)     | Write Markdown locally and compare GitHub-, Qiita-, and Zenn-inspired previews and compatibility hints.                                         |
-| [Temporary Links](https://github.com/ttomohisa/htmlapps-temporary-links)               | Keep a disposable local work queue of web links, `file:///` URLs, Windows paths, and UNC paths.                                                 |
-| [Task Packing](https://github.com/ttomohisa/htmlapps-task-packing)                     | Give tasks a physical size and fit only what actually fits onto a finite-capacity visual board.                                                 |
-| [Random Picker](https://github.com/ttomohisa/htmlapps-random-picker)                   | Pick candidates, randomize order, create balanced teams, or run an animated wheel from a simple list.                                           |
+| Project                                                                                | What it does                                                                                                                                            |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SQLite Explorer](https://github.com/ttomohisa/htmlapps-sqlite-explorer)               | Explore unfamiliar SQLite databases with table browsing, schema and relationship views, profiling, read-only SQL, and query-plan analysis.              |
+| [JSON / YAML / CSV Viewer](https://github.com/ttomohisa/htmlapps-json-yaml-csv-viewer) | Inspect, search, profile, check, and convert JSON, YAML, CSV, TSV, and JSON Lines locally.                                                              |
+| [HTML Parquet Viewer](https://github.com/ttomohisa/html-parquet-viewer)                | Inspect Parquet schemas and browse data as a table without uploading the file.                                                                          |
+| [Archive Explorer](https://github.com/ttomohisa/htmlapps-archive-explorer)             | Explore, preview, analyze, and extract ZIP, 7z, RAR5, TAR, GZIP, CAB, ISO, and LZH/LHA archives locally.                                                |
+| [Developer Toolbox](https://github.com/ttomohisa/httpapps-developer-toolbox)           | Put Base64, JSON, JWT, cron, regex, hashes, timestamps, text conversion, web utilities, and dozens of other developer tools into one HTML file.         |
+| [Engineering Calculator](https://github.com/ttomohisa/htmlapps-engineering-calculator) | Provide 80 mechanical, manufacturing, fluid, thermal, electrical, tolerance, and unit-conversion calculations with parameter sweeps and local graphing. |
+| [Text Inspector](https://github.com/ttomohisa/htmlapps-text-inspector)                 | Go beyond character counting with composition analysis, frequent words, long-sentence detection, writing checks, and an X-Ray view.                     |
+| [Markdown Preview Lab](https://github.com/ttomohisa/htmlapps-markdown-preview-lab)     | Write Markdown locally and compare GitHub-, Qiita-, and Zenn-inspired previews and compatibility hints.                                                 |
+| [Temporary Links](https://github.com/ttomohisa/htmlapps-temporary-links)               | Keep a disposable local work queue of web links, `file:///` URLs, Windows paths, and UNC paths.                                                         |
+| [Task Packing](https://github.com/ttomohisa/htmlapps-task-packing)                     | Give tasks a physical size and fit only what actually fits onto a finite-capacity visual board.                                                         |
+| [Restock List](https://github.com/ttomohisa/htmlapps-restock-list)                     | Manage recurring household purchases with simple In stock / Low / Out states that automatically build the current shopping list.                        |
+| [Random Picker](https://github.com/ttomohisa/htmlapps-random-picker)                   | Pick candidates, randomize order, create balanced teams, or run an animated wheel from a simple list.                                                   |
 
 ### 📱 Camera, device & everyday utilities
 
-| Project                                                                            | What it does                                                                                                                            |
-| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [Pop-up Face Check-in](https://github.com/ttomohisa/htmlapps-popup-face-check-in)  | Run temporary event reception with local face matching, manual fallback, attendance history, and encrypted portable registration files. |
-| [Gesture Presentation](https://github.com/ttomohisa/htmlapps-gesture-presentation) | Present PDFs or images and move between pages with hand gestures, plus a serverless two-step QR WebRTC Air Remote.                      |
-| [Device Check](https://github.com/ttomohisa/htmlapps-device-check)                 | Check camera, microphone, speakers, display, keyboard, touch/pointer input, gamepads, and motion sensors in one place.                  |
-| [QR Reader](https://github.com/ttomohisa/htmlapps-qr-reader)                       | Scan QR codes from a live camera or existing images, with smartphone-first controls and local scan history.                             |
-| [Pocket Level](https://github.com/ttomohisa/htmlapps-pocket-level)                 | Turn a smartphone into a spirit level / inclinometer with zeroing, hold, averaging, and two-point calibration.                          |
-| [Way Back](https://github.com/ttomohisa/htmlapps-way-back)                         | Save a location and find your way back using a large direction arrow and straight-line distance without requiring a map.                |
-| [Pocket Teleprompter](https://github.com/ttomohisa/htmlapps-pocket-teleprompter)   | Paste a script and use your phone as an installation-free teleprompter with automatic scrolling and local saving.                       |
-| [Signal Screen](https://github.com/ttomohisa/htmlapps-signal-screen)               | Turn a phone or computer display into a highly visible sign using large text, arrows, colors, and QR codes.                             |
-| [Tap Counter](https://github.com/ttomohisa/htmlapps-tap-counter)                   | A smartphone-friendly tally counter for people, inventory, laps, repetitions, and multiple simultaneous categories.                     |
-| [Pomodoro Timer](https://github.com/ttomohisa/htmlapps-pomodoro-timer)             | A local-first focus timer with Picture-in-Picture, distraction counting, flow overtime, and local session history.                      |
+| Project                                                                            | What it does                                                                                                                                                                    |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Pop-up Face Check-in](https://github.com/ttomohisa/htmlapps-popup-face-check-in)  | Run temporary event reception with local face matching, manual fallback, attendance history, and encrypted portable registration files.                                         |
+| [Gesture Presentation](https://github.com/ttomohisa/htmlapps-gesture-presentation) | Present PDFs or images and move between pages with hand gestures, plus a serverless two-step QR WebRTC Air Remote.                                                              |
+| [Wireless Sensor](https://github.com/ttomohisa/htmlapps-wireless-sensor)           | Connect up to four smartphones as synchronized wireless motion sensors over direct WebRTC, with impact timing, FFT analysis, experiment presets, and reloadable local sessions. |
+| [Device Check](https://github.com/ttomohisa/htmlapps-device-check)                 | Check camera, microphone, speakers, display, keyboard, touch/pointer input, gamepads, and motion sensors in one place.                                                          |
+| [QR Reader](https://github.com/ttomohisa/htmlapps-qr-reader)                       | Scan QR codes from a live camera or existing images, with smartphone-first controls and local scan history.                                                                     |
+| [Pocket Level](https://github.com/ttomohisa/htmlapps-pocket-level)                 | Turn a smartphone into a spirit level / inclinometer with zeroing, hold, averaging, and two-point calibration.                                                                  |
+| [Way Back](https://github.com/ttomohisa/htmlapps-way-back)                         | Save a location and find your way back using a large direction arrow and straight-line distance without requiring a map.                                                        |
+| [Pocket Teleprompter](https://github.com/ttomohisa/htmlapps-pocket-teleprompter)   | Paste a script and use your phone as an installation-free teleprompter with automatic scrolling and local saving.                                                               |
+| [Signal Screen](https://github.com/ttomohisa/htmlapps-signal-screen)               | Turn a phone or computer display into a highly visible sign using large text, arrows, colors, and QR codes.                                                                     |
+| [Tap Counter](https://github.com/ttomohisa/htmlapps-tap-counter)                   | A smartphone-friendly tally counter for people, inventory, laps, repetitions, and multiple simultaneous categories.                                                             |
+| [Pomodoro Timer](https://github.com/ttomohisa/htmlapps-pomodoro-timer)             | A local-first focus timer with Picture-in-Picture, distraction counting, flow overtime, and local session history.                                                              |
 
 ### 🧪 Experiments
 
@@ -94,7 +99,7 @@ Most recent projects share a few principles:
 
 The applications are only one side of the work.
 
-I'm also building the infrastructure needed to compile native software for browsers, reduce WASM size for specific applications, verify the resulting runtime, and distribute it reproducibly.
+I'm also building infrastructure to compile native software for browsers, reduce WebAssembly runtimes for specific applications, verify the resulting binaries, and distribute them reproducibly.
 
 | Project                                                                          | What it does                                                                                                                                                                     |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -132,7 +137,7 @@ The generated cores:
 
 ### OpenCV WASM Builder
 
-**OpenCV WASM Builder** uses logical components instead of forcing each application to depend directly on OpenCV's changing module structure.
+**OpenCV WASM Builder** uses logical components instead of forcing every application to depend directly on OpenCV's changing module structure.
 
 Components include:
 
@@ -146,7 +151,7 @@ Components include:
 * `face`
 * `stitching`
 
-Application profiles can then request only what they need.
+Application profiles can request only what they need.
 
 Examples include:
 
@@ -166,7 +171,7 @@ The builder resolves component dependencies, maps them to the appropriate OpenCV
 
 Purpose-specific builders intentionally remove unnecessary functionality. WASM Zoo instead tries to preserve the **upstream program/API shape** when a broad reusable distribution is more useful.
 
-Current packages:
+Current packages in **WASM Zoo v0.9.0**:
 
 | Package         | Current upstream |
 | --------------- | ---------------- |
@@ -177,20 +182,20 @@ Current packages:
 | **Ghostscript** | 10.07.1          |
 | **jq**          | 1.8.2            |
 
-WASM Zoo publishes more than binary `.wasm` files. A package is expected to include:
+A Zoo package is expected to provide more than a `.wasm` binary:
 
 * Exact upstream source and toolchain revisions
 * Reproducible build scripts
 * Real browser runtime smoke tests
 * Machine-readable manifests and capability information
 * Upstream freshness tracking
+* Release-health monitoring
 * SHA-256 checksums
 * License notices
 * Corresponding source archives
 * in-toto / SLSA provenance
 * CycloneDX SBOMs
 * Interactive browser playgrounds
-* Release-health monitoring
 
 ## 💡 Development approach
 
@@ -232,7 +237,7 @@ WASM Zoo publishes more than binary `.wasm` files. A package is expected to incl
 * **Cloud & data engineering:** Azure, Databricks, Parquet, MLflow, IoT
 * **Browser applications:** HTML, CSS, JavaScript, WebAssembly, Web Workers, WebCodecs
 * **Local processing:** PDFs, images, video, audio, archives, SQLite, structured data
-* **Computer vision:** OpenCV, ONNX Runtime Web, YuNet, SFace
+* **Computer vision & local AI:** OpenCV, ONNX Runtime Web, YuNet, SFace, TinyCLIP
 * **Browser APIs:** File APIs, Canvas, Web Audio, Media Capture, sensors, WebRTC, IndexedDB, Picture-in-Picture
 * **WebAssembly:** FFmpeg, OpenCV, Emscripten, libarchive, ImageMagick, libvips, Ghostscript, jq
 * **Build & automation:** PowerShell, Docker, GitHub Actions, GitHub Pages, reproducible builds, browser smoke testing
