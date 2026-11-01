@@ -4,6 +4,5 @@ I work on cloud and data systems. Outside work, I make browser tools—often thi
 
 I try to keep them simple: no accounts, no file uploads, and a single HTML file when it makes sense.
 
-- [Browser Kitty Apps](https://browser-kitty.com/) — Tools for PDFs, images, video, data, and everyday tasks.
+- [Single HTML Apps](https://browser-kitty.com/) — Browser Kitty Apps for PDFs, images, video, data, and everyday tasks.
 - [WASM Zoo](https://github.com/ttomohisa/wasm-zoo) — Building native tools like FFmpeg and jq for WebAssembly.
-- [Single HTML App Template](https://github.com/ttomohisa/htmlapps-template) — A starting point for my standalone browser apps.
