@@ -1,6 +1,6 @@
 # Tomohisa
 
-I work with Azure and Databricks. Outside work, I make browser tools—often things I wanted to use myself.
+I work on cloud and data systems. Outside work, I make browser tools—often things I wanted to use myself.
 
 I try to keep them simple: no accounts, no file uploads, and a single HTML file when it makes sense.
 
